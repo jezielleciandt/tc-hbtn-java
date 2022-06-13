@@ -6,8 +6,7 @@ public class PrintFormatacaoNumeros {
         float valor = 7654.321f;
         Locale localeBR = new Locale("pt","BR");
         NumberFormat moeda = NumberFormat.getCurrencyInstance(localeBR);
-        NumberFormat percentual = NumberFormat.getPercentInstance(localeBR);
-        System.out.println("Valor: " + moeda.format(valor) + "\n" + "Taxa: " + percentual.format(taxa));
+        System.out.println("Valor: " + moeda.format(valor) + "\n" + "Taxa: " + String.format("%.2f", taxa) + "%");
         System.out.println();
     }
 }
