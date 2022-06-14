@@ -1,7 +1,7 @@
 import static java.lang.Integer.parseInt;
 
 public class InteiroPositivo {
-    private Integer valor;
+    private int valor;
 
     public InteiroPositivo(int valor) throws Exception {
         naoEhPositivo(valor);
@@ -15,7 +15,7 @@ public class InteiroPositivo {
     }
     public Exception naoEhPositivo(Integer valor) throws Exception{
         if(valor<0){
-            throw new IllegalAccessException("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
         return null;
     }
