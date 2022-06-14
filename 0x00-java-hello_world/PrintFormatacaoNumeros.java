@@ -9,7 +9,8 @@ public class PrintFormatacaoNumeros {
         Locale localeBR = new Locale("pt ","BR");
         NumberFormat moeda = NumberFormat.getCurrencyInstance(localeBR);
         NumberFormat formatter = new DecimalFormat("#0.00");
-        System.err.println("Valor: " + moeda.format(valor));
-        System.err.println("Taxa: " + formatter.format(taxa).concat("%"));
+        System.out.println("Valor: " + moeda.format(valor));
+        System.out.println("Taxa: " + formatter.format(taxa).concat("%"));
+        System.err.print("");
     }
 }
