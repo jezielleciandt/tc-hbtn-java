@@ -11,6 +11,6 @@ public class PrintFormatacaoNumeros {
         NumberFormat formatter = new DecimalFormat("#0.00");
         System.out.println("Valor: " + moeda.format(valor));
         System.out.println("Taxa: " + formatter.format(taxa).concat("%"));
-        System.err.print("");
+        System.err.print("[Anything]");
     }
 }
