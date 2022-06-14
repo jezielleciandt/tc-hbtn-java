@@ -10,7 +10,6 @@ public class PrintFormatacaoNumeros {
         NumberFormat moeda = NumberFormat.getCurrencyInstance(localeBR);
         NumberFormat formatter = new DecimalFormat("#0.00");
         System.out.println("Valor: " + moeda.format(valor));
-        System.out.println("Taxa: " + formatter.format(taxa).concat("%"));
-        System.err.print("[Anything]");
+        System.err.println("Taxa: " + formatter.format(taxa).concat("%"));
     }
 }
