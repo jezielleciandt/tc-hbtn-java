@@ -17,16 +17,16 @@ public class PersonagemGame {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void tomarDano(int dano){
-        if(dano>=saudeAtual){
+    public void tomarDano(int quantidadeDeDano){
+        if(quantidadeDeDano>=saudeAtual){
             this.saudeAtual=0;
         }else{
-            this.saudeAtual-= dano;
+            this.saudeAtual-= quantidadeDeDano;
         }
     }
 
-    public void receberCura(int cura){
-        this.saudeAtual+= cura;
+    public void receberCura(int quantidadeDeCura){
+        this.saudeAtual+= quantidadeDeCura;
         if(saudeAtual>100){
             this.saudeAtual=100;
         }
