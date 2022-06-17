@@ -36,9 +36,7 @@ public class PersonagemGame {
     }
 
     public void setStatus(String status) {
-        if("vivo".equals(status) || "morto".equals(status)){
             this.status = status;
-        }
     }
 
     public void tomarDano(int quantidadeDeDano){
