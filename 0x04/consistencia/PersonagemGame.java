@@ -23,9 +23,12 @@ public class PersonagemGame {
     }
 
     public void setNome(String nome) {
-        if (nome != null && !nome.isBlank()){
+        if (nome != null && nome !=""){
             this.nome = nome;
+        }else{
+            this.nome = getNome();
         }
+
     }
 
     public String getStatus() {
