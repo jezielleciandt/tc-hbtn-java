@@ -6,7 +6,8 @@ public class NumerosPares {
             num += 2;
             System.out.print(num + ", ");
             if(i == 48){
-                System.out.print("98");
+                num+= 2;
+                System.out.printf("%d\n",num);
             }
         }
     }
