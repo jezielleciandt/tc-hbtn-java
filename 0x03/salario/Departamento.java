@@ -1,6 +1,6 @@
 public class Departamento {
     private double valorMeta;
-    private double volorAtingidoMeta;
+    private double valorAtingidoMeta;
 
     public double getValorMeta() {
         return valorMeta;
@@ -10,21 +10,21 @@ public class Departamento {
         this.valorMeta = valorMeta;
     }
 
-    public double getVolorAtingidoMeta() {
-        return volorAtingidoMeta;
+    public double getValorAtingidoMeta() {
+        return valorAtingidoMeta;
     }
 
-    public void setVolorAtingidoMeta(double volorAtingidoMeta) {
-        this.volorAtingidoMeta = volorAtingidoMeta;
+    public void setValorAtingidoMeta(double valorAtingidoMeta) {
+        this.valorAtingidoMeta = valorAtingidoMeta;
     }
 
     public Departamento(double valorMeta, double volorAtingidoMeta) {
         this.valorMeta = valorMeta;
-        this.volorAtingidoMeta = volorAtingidoMeta;
+        this.valorAtingidoMeta = volorAtingidoMeta;
     }
 
     public boolean alcancouMeta(){
-        if(this.volorAtingidoMeta >= this.valorMeta){
+        if(this.valorAtingidoMeta >= this.valorMeta){
             return true;
         }
         return false;
