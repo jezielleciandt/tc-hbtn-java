@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListaTodo {
-    private ArrayList<Tarefa> tarefas;
+    private List<Tarefa> tarefas;
 
     public ListaTodo() {
         this.tarefas = new ArrayList<>();
@@ -9,7 +10,7 @@ public class ListaTodo {
 
     public void adicionarTarefa(Tarefa novaTarefa) {
         if (tarefaExiste(novaTarefa.getIdentificador())) {
-            throw new RuntimeException("Tarefa com identificador " + novaTarefa.getIdentificador() + " ja existente na lista");
+            throw new IllegalArgumentException("Tarefa com identificador " + novaTarefa.getIdentificador() + " ja existente na lista");
         } else {
             this.tarefas.add(novaTarefa);
         }
