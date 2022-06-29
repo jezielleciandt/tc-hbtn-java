@@ -3,7 +3,7 @@ public class Tarefa {
     private boolean estahFeita;
     private int identificador;
 
-    public Tarefa(String descricao, int identificador) throws Exception {
+    public Tarefa(String descricao, int identificador){
         modificarDescricao(descricao);
         this.identificador = identificador;
     }
@@ -32,9 +32,9 @@ public class Tarefa {
         this.identificador = identificador;
     }
 
-    public void modificarDescricao(String novaDescricao) throws Exception {
+    public void modificarDescricao(String novaDescricao){
         if(novaDescricao.isBlank() || novaDescricao == null){
-            throw new Exception("Descricao de tarefa invalida");
+            throw new IllegalArgumentException("Descricao de tarefa invalida");
         }else {
             setDescricao(novaDescricao);
         }
