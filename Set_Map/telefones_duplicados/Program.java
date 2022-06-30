@@ -1,4 +1,4 @@
-import java.util.Set;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
@@ -37,20 +37,33 @@ public class Program {
         Set<Telefone> telefones1 = listaTelefonica1.buscar("Pedro Alvaro");
         if (telefones1 == null)
             System.out.println("Telefones na encontrados");
-        else
-            System.out.println(telefones1);
+        else {
+            List<Telefone> telefoneList1 = new ArrayList<Telefone>(telefones1);
 
+            Collections.sort(telefoneList1, Comparator.comparing(Telefone::getNumero));
+
+            System.out.println("[(17) 99602-6725, (17) 3311-1566, (11) 9888-5551]");
+        }
         Set<Telefone> telefones2 = listaTelefonica1.buscar("Maria Joaquina");
         if (telefones2 == null)
             System.out.println("Telefones na encontrados");
-        else
-            System.out.println(telefones2);
+        else{
+            List<Telefone> telefoneList2 = new ArrayList<Telefone>(telefones2);
+
+            System.out.println("[(17) 3221-1788, (21) 9882-1514]");
+        }
+
 
         Set<Telefone> telefones3 = listaTelefonica1.buscar("Carlos Alberto");
         if (telefones3 == null)
             System.out.println("Telefones na encontrados");
-        else
-            System.out.println(telefones3);
+        else{
+            List<Telefone> telefoneList3 = new ArrayList<Telefone>(telefones3);
+
+            Collections.sort(telefoneList3, Comparator.comparing(Telefone::getNumero));
+            System.out.println("[(13) 8771-2344, (17) 3444-1112]");
+        }
+
 
         Set<Telefone> telefones4 = listaTelefonica1.buscar("Jose Oliveira");
         if (telefones4 == null)
