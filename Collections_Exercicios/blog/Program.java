@@ -1,5 +1,4 @@
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
@@ -37,8 +36,9 @@ public class Program {
         blog1.adicionarPostagem(post5);
 
         Set<String> autores = blog1.obterTodosAutores();
-
-        System.out.println(autores);
+        List<String> autores1 = new ArrayList<>(autores);
+        Collections.reverse(autores1);
+        System.out.println(autores1);
 
         Map<String, Integer> contagem = blog1.obterContagemPorCategoria();
 
