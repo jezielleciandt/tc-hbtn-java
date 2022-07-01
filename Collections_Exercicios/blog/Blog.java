@@ -14,12 +14,12 @@ public class Blog {
             autoresDuplicados.add(postagem.getAutor());
         }
         Collections.sort(autoresDuplicados);
-        Set<String> autores = new HashSet<>(autoresDuplicados);
+        Set<String> autores = new TreeSet<>(autoresDuplicados);
         return autores;
     }
 
-    public HashMap<String, Integer> obterContagemPorCategoria(){
-        HashMap<String, Integer> contagemDePostagemPorCategoria = new HashMap<>();
+    public Map<String, Integer> obterContagemPorCategoria(){
+        Map<String, Integer> contagemDePostagemPorCategoria = new TreeMap<String, Integer>();
         Integer totalPostagem = 0;
         for(Post postagem: postagens){
             for(Post post: postagens){

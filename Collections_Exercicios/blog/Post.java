@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Post {
     private String autor, titulo, corpo, categoria;
 
@@ -41,5 +43,18 @@ public class Post {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Post post = (Post) o;
+        return Objects.equals(autor, post.autor) && Objects.equals(titulo, post.titulo) && Objects.equals(corpo, post.corpo) && Objects.equals(categoria, post.categoria);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(autor, titulo, corpo, categoria);
     }
 }
