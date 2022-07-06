@@ -28,6 +28,6 @@ public class Eletronico {
 
     @Override
     public String toString() {
-        return String.format("[%s] R$ %s", getDescricao(), getValor());
+        return String.format("[%s] R$ %.6f", getDescricao(), getValor());
     }
 }

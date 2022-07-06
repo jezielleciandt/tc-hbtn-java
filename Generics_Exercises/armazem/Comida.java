@@ -38,6 +38,6 @@ public class Comida {
 
     @Override
     public String toString() {
-        return String.format("[%s] %s R$ %s", getNome(), getCalorias(), getPreco());
+        return String.format("[%s] %.6f R$ %.6f", getNome(), getCalorias(), getPreco());
     }
 }
