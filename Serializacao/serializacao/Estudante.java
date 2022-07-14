@@ -5,7 +5,7 @@ public class Estudante implements Serializable {
     private static final long serialVersionUID = -7375107260039283791L;
     private int idade;
     private String nome;
-    private String senha;
+    transient private String senha;
 
     //transient - para atributos que não se deseja serializar
 
