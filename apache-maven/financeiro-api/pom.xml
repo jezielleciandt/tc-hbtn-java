@@ -92,7 +92,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>br.com.techcamps.financeiro.FinanceiroMain</mainClass>
+                            <mainClass>FinanceiroMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
